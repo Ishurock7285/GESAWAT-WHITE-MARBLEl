@@ -1,0 +1,676 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#111;
+padding:15px 0;
+}
+.section p:first-of-type{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+
+.container{
+width:90%;
+margin:auto;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#d4af37;
+font-size:22px;
+font-weight:bold;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+/* HERO SECTION */
+/* ===== HERO SLIDER ===== */
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.6),
+rgba(0,0,0,.6)),
+url(data:image/jpeg;base64,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) center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.btn{
+display:inline-block;
+background:#caa34d;
+padding:12px 25px;
+margin-top:20px;
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+background:#a67c2d;
+}
+
+
+.btn:hover{
+background:#d4af37;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+body {
+    background-image: url('data:image/jpeg;base64,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'); /* Yahan apni photo ka sahi naam likhein */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/* Sirf Contact Page ko middle mein laane ke liye */
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contact box ko bada aur saaf dikhane ke liye */
+.contact-body .section {
+    background: rgba(255, 255, 255, 0.85); /* Transparent white box */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Heading aur Text ko bada karein */
+.contact-body .section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-body .section p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+/* Ye sirf Contact page ke content ko center karega, header ko nahi */
+.contact-only {
+    margin: 0;
+    background-image: url('marble-bg.jpg'); /* Aapki background photo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Sirf contact ke section (dappe) ko beech mein laane ke liye */
+.contact-only .section {
+    background: rgba(255, 255, 255, 0.9); /* Safed transparent box */
+    padding: 60px 40px;
+    border-radius: 20px;
+    text-align: center;
+    
+    /* Ise screen ke beech mein laane ke liye */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Text ko bada (Large) karne ke liye */
+.contact-only .section h2 {
+    font-size: 3.5rem; /* Badi heading */
+    margin-bottom: 20px;
+}
+
+.contact-only .section p {
+    font-size: 1.6rem; /* Bade numbers aur naam */
+    margin: 15px 0;
+    color: #000;
+}
+.hero {
+    display: flex;
+    align-items: flex-start; /* Isse content upar chala jayega */
+    justify-content: center;
+    height: 60vh; /* Ya jo bhi aapne height rakhi ho */
+    padding-top: 0px; /* Upar se thoda gap dene ke liye */
+}
+
+.hero h1 {
+    color: white;
+    margin-top: 0; 
+    font-size: 3rem; /* Aap apne hisab se adjust kar sakte hain */
+}
+.section {
+    color: white;
+    text-align: center; /* Text aur button dono ko center karne ke liye */
+    padding: 50px 80px;
+}
+.section h2 {
+    color: white;
+    text-decoration: rgb(253, 253, 253) underline;
+    
+}
+
+.section button, .section .btn { 
+    /* Agar aapne anchor tag <a> use kiya hai toh yahan .section a likhein */
+    display: inline-block;
+    background-color: rgb(158, 180, 48);
+    padding: 30px 50px; /* Isse button bada ho jayega */
+    font-size: 1.5rem;   /* Text thoda bada dikhega */
+    margin-top: 20px;
+    cursor: pointer;
+}
+.product-card {
+    position: relative; /* Ye zaroori hai */
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;         /* Upar se 50% niche */
+    left: 50%;        /* Left se 50% aage */
+    transform: translate(-50%, -50%); /* Perfect centering ke liye */
+    background-color: rgba(0, 0, 0, 0.7); /* Thoda transparent background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Saara content (image, text, button) center kar dega */
+    justify-content: center;
+    padding: 0px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn {
+    width: fit-content; /* Button ko poori width lene se rokega */
+   background-color: #33326f;
+    padding: 12px 24px;
+    font-weight: bold;
+}
+.product-card img {
+    width: 100%;      /* Isse photo card ki poori width tak badi ho jayegi */
+    height: 400px;    /* Aap height apni pasand ke mutabiq set kar sakte hain */
+    object-fit: cover; /* Isse photo khinchegi (stretch) nahi, balki sahi se fit hogi */
+    border-radius: 15px; /* Thode curved corners ke liye (optional) */
+}
+.product-card h3 {
+    font-size: 28px;       /* Size badhane ke liye (aap 32px bhi kar sakte hain) */
+    font-weight: 800;       /* Zyada bold karne ke liye */
+    margin-top: 15px;       /* Photo se thoda niche gap dene ke liye */
+    margin-bottom: 5px;     /* Niche wale text se gap kam karne ke liye */
+    color: #000;            /* Dark black color ke liye */
+    text-transform: uppercase; /* Agar saare letters bade chahiye toh ye add karein */
+}/* "Our Marble Collection" Heading ke liye */
+h2 {
+    font-size: 48px;       /* Isse size bada ho jayega */
+    font-weight: 900;       /* Extra bold karne ke liye */
+    text-align: center;     /* Beech mein laane ke liye */
+    text-transform: uppercase; /* Saare letters bade karne ke liye (Optional) */
+    letter-spacing: 2px;    /* Letters ke beech thoda gap */
+    margin-top: 40px;       /* Upar se thoda gap */
+    margin-bottom: 30px;    /* Niche photo se thoda gap */
+    color: #222;            /* Dark color professional look ke liye */
+    font-family: 'Arial Black', sans-serif; /* Bold font family */
+}/* Card ko relative banayein taaki button iske hisab se move ho */
+.card, .product-card {
+    position: relative;
+    overflow: hidden; /* Photo se bahar na jaye */
+}
+
+/* Button ki styling */
+.order-btn {
+    position: absolute;
+    top: 50%;         /* Upar se bilkul beech mein */
+    left: 50%;        /* Left se bilkul beech mein */
+    transform: translate(-50%, -50%); /* Perfect centering alignment */
+    
+    background-color: #da9220; /* Sunehra/Orange color */
+    color: rgb(34, 7, 7);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 20;      /* Photo ke upar dikhne ke liye */
+    display: block;   /* Ya hover par dikhane ke liye 'none' karein */
+}
+
+/* Hover Effect (Optional: Jab mouse le jayein tabhi button dikhe) */
+.card .order-btn {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .order-btn {
+    opacity: 1;
+}
+/* Container ko relative rakhein taaki button photo ke andar rahe */
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+/* Button ko center mein lane ki styling */
+.order-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    
+    background-color: #25D366; /* WhatsApp green ya koi bhi bright color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 5;
+}
+
+/* Hover effect taaki sundar lage */
+.order-btn:hover {
+    background-color: #128C7E;
+    transform: translate(-50%, -50%) scale(1.1);
+}/* 1. Photo ke container ko set karein */
+.img-container {
+    position: relative; /* Ye zaroori hai button ko andar rakhne ke liye */
+    width: 100%;
+    display: inline-block;
+}
+
+/* 2. Button ko photo ke center mein layein */
+.order-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect center alignment */
+    
+    /* Button ka look */
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+    display: block; /* Hamesha dikhne ke liye */
+}
+
+/* 3. Hover karne par thoda effect (optional) */
+.order-btn:hover {
+    background-color: #1
+    %) scale(1.1);
+}
+.hero h1 {
+    font-size: 80px;         /* Size ko 80px ya isse zyada karein aur bada dikhane ke liye */
+    font-weight: 900;       /* Extra bold look ke liye */
+    text-shadow: 3px 2px 10px rgba(0,0,0,0.5); /* Background image par text ko ubhaarne ke liye */
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Saare letters bade karne ke liye */
+}.btn {
+    padding: 20px 45px;    /* Pehla number (20px) height badhayega, dusra (40px) width */
+    font-size: 24px;       /* Text ko bada aur saaf dikhane ke liye */
+    font-weight: bold;     /* Text ko thoda mota (bold) karne ke liye */
+    min-width: 250px;      /* Aap fixed width bhi de sakte hain agar button chota lag raha ho */
+    cursor: pointer;
+    background-color: #333; /* Blackish background jo aapke design mein hai */
+    color: white;
+    border: none;
+    transition: 1000s;      /* Smooth effect ke liye */
+}
+
+/* Hover karne par button thoda aur bada dikhe */
+.btn:hover {
+    transform: scale(1.1); 
+    background-color: #000;
+}
+/* Logo (GWM) ko bada karne ke liye */
+.logo {
+    font-size: 60px;         /* Isse GWM bada ho jayega */
+    font-weight: 900;       /* Zyada bold dikhane ke liye */
+    color: #FFD700;         /* Golden color barkrar rakhne ke liye */
+}
+
+/* Navigation links (Home, Products, etc.) ko bada karne ke liye */
+nav ul li a {
+    font-size: 40px;         /* Links ka size badhane ke liye */
+    font-weight: 1000;       /* Thoda bold look dene ke liye */
+    padding: 10px 15px;     /* Beech mein gap badhane ke liye */
+    text-decoration: none;
+    color: white;
+}
+
+/* Header ka height thoda badhane ke liye (agar zarurat ho) */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50;        /* Header ko thoda upar-niche se jagah dene ke liye */
+}
+hero h1 {
+    font-size: 60px; /* Ise 80 se 60 kar dein */
+    text-align: center;
+}
+/* Puri grid ko set karne ke liye */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;  /*Isse sab kuch ek hi clm me ayi */     
+    gap: 20px;            /* Photos ke beech ka gap */
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;       /* Screen ke beech mein lane ke liye */
+}
+
+/* Har ek marble card ki styling */
+.card {
+    position: relative;   /* Button ko photo ke upar lane ke liye zaroori hai */
+    background: #211f1f;
+    border: 1px solid #070707;
+    border-radius: 10px;
+    overflow: hidden;     /* Photo ko card se bahar na nikalne de */
+    text-align: center;
+    padding-bottom: 15px;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+}
+
+/* Photo ki size barabar karne ke liye */
+.card img {
+    width: 450%;
+    height: 200px;        /* Sabhi photos ki height ek jaisi rahegi */
+    object-fit: cover;    /* Photo kategi nahi, barabar fit hogi */
+    display: block;
+}
+
+/* Order Now Button jo photo ke upar dikhega */
+.order-btn {
+    position: absolute;
+    top: 40%;             /* Photo ke beech mein */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.9;         /* Thoda transparent taaki photo dikhe */
+}
+
+.order-btn:hover {
+    background-color: #0c3f39; /* Hover karne par dark green */
+    transform: translate(-50%, -50%) scale(1.1); /* Thoda bada hoga */
+}
+
+/* Price aur Name ki styling */
+.card h3 {
+    font-size: 18px;
+    margin: 15px 0 5px;
+    color: #1d1b1b;
+}
+
+.price {
+    color: #f39c12;       /* Golden orange color */
+    font-weight: bold;
+    font-size: 20px;
+}
+/* --- LOGIN PAGE KA CODE (CSS FILE MEIN SABSE NICHE) --- */
+
+/* Resetting for Login Page only using ID */
+#login-page {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+    /* --- Dark Marble Background Sirf Login Page Ke Liye --- */
+    background-image: url('images/dark_marble_bg.jpg'); /* Aapki file ka asli naam likhein */
+    background-size: cover; /* Photo pure screen par fit ho jayegi */
+    background-position: center; /* Photo center mein rahegi */
+    background-repeat: no-repeat; /* Photo repeat nahi hogi */
+    /* ----------------------------------------------------- */
+    
+    transition: background 0.6s ease;
+}
+
+#login-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 0, 0, 0.902); /* Andhera karne ke liye halki black layer */
+    z-index: 1; /* Marble ke upar */
+}
+
+/* Isse andhere mein marble thoda sa dikhta rahega */
+#lamp-trigger:checked ~ #login-page::before {
+    background: rgba(0, 0, 0, 0.2); /* Light on karne par layer halki black ho jayegi */
+}
+
+/* Ensure other elements are above the dark layer */
+.main-wrapper, #lamp-trigger {
+    z-index: 2; /* Dark layer se upar */
+}
+
+/* (Rope, Light Beam, aur Login Box ka code pehle jaisa hi rahega) */
+#lamp-trigger { display: none; }
+.main-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.lamp-rope {
+    width: 2px; height: 140px; background: #555; position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%); cursor: pointer; z-index: 10; transition: height 0.2s ease;
+}
+.lamp-rope::after {
+    content: ''; width: 12px; height: 12px; background: #333; border-radius: 50%;
+    position: absolute; bottom: -6px; left: -5px;
+}
+.light-beam {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 100vh;
+    background: radial-gradient(circle at top, rgba(255, 255, 150, 0.25), transparent 80%);
+    clip-path: polygon(48% 0, 52% 0, 100% 100%, 0 100%);
+    opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+}
+.login-box {
+    width: 320px; padding: 40px; background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px; color: white; text-align: center;
+    opacity: 0; transform: translateY(30px); transition: all 0.7s ease; z-index: 5;
+}
+#lamp-trigger:checked ~ .main-wrapper .light-beam { opacity: 1; }
+#lamp-trigger:checked ~ .main-wrapper .login-box { opacity: 1; transform: translateY(0); }
+#lamp-trigger:active ~ .main-wrapper .lamp-rope { height: 160px; }
+.login-box h2 { margin-bottom: 20px; font-weight: 300; }
+.login-box input {
+    width: 100%; padding: 12px; margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px; color: rgb(21, 21, 21); outline: none;
+}
+.login-btn {
+    width: 100%; padding: 12px; background: #f1c40f; border: none;
+    border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+grid {
+    display: grid;
+    /* Laptop par 3-4 aur mobile par 1 card apne aap set hoga */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Isse grid center mein aayega */
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Mouse le jaane par card thoda upar uthega */
+}
+.card img {
+    width: 100%;
+    height: 200px; /* Sabhi photos ki height fix ho jayegi */
+    object-fit: cover; /* Photo kategi nahi, box mein fit ho jayegi */
+    display: block;
+}
+.main-title {
+    font-size: 45px;       /* Isse text bada ho jayega */
+    font-weight: 900;       /* Isse text extra bold dikhega */
+    text-transform: uppercase; /* Saare letters bade rahenge */
+    color: #333;           /* Aap apne hisaab se color badal sakte hain */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+    margin-top: 0;
+}
+.section {
+    /* ... (Step 1 wala background code) ... */
+    
+    /* Text ko perfectly center karne ke liye */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* Pure section ki height fix karne ke liye */
+    height: 100vh; /* Puri screen height lega */
+    
+    /* Heading (H2) ko style karne ke liye */
+    h2 {
+        font-size: 50px; /* Text ko bada karega */
+        font-weight: bold; /* Text ko bold karega */
+        margin-bottom: 20px; /* Niche wale text se doori */
+    }
+    
+    /* Paragraph ko style karne ke liye */
+    p {
+        font-size: 20px; /* Paragraph text ko bada karega */
+        max-width: 600px; /* Text line length limit */
+    }
+    .order-btn {
+    background-color: #27ae60; /* Button ka color (Green) */
+    color: white;              /* Text ka color */
+    padding: 10px 25px;        /* Button ko bada karne ke liye */
+    border: none;              /* Extra border hatane ke liye */
+    border-radius: 5px;        /* Kono ko thoda round karne ke liye */
+    font-size: 16px;           /* Text size */
+    font-weight: bold;         /* Text ko mota karne ke liye */
+    cursor: pointer;           /* Mouse le jane par hath ka nishaan aaye */
+    transition: 0.3s;          /* Smooth effect ke liye */
+    margin-top: 10px;          /* Photo se thodi doori banane ke liye */
+}
+
+/* Jab mouse button par jaye (Hover effect) */
+.order-btn:hover {
+    background-color: #219150; /* Thoda dark green color */
+    transform: scale(1.05);    /* Button thoda sa phool jayega */
+}
+.section{
+    color: white;
+}

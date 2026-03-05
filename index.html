@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamp Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="login-page">
+
+    <input type="checkbox" id="lamp-trigger">
+
+    <div class="main-wrapper">
+        <div class="lamp-unit">
+            <div class="lamp-top"></div>
+            <label for="lamp-trigger" class="lamp-rope"></label>
+            <div class="light-beam"></div>
+        </div>
+
+        <div class="login-box">
+            <h2>LOGIN</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="user-email" placeholder="Enter Gmail" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="user-pass" placeholder="Enter Password" required>
+                </div>
+                
+                <button type="submit" class="login-btn">SIGN IN</button>
+            </form>
+            <p id="error-msg" style="color: #ff4d4d; margin-top: 10px; font-size: 14px; display: none;">Error: Gmail must contain 'ishaan' and correct password!</p>
+        </div>
+    </div>
+<script>
+    // 1. Form ko select karein
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Page ko reload hone se rokta hai
+
+        // 2. Ab yahan koi check nahi hai (No if/else)
+        // User kuch bhi sahi ya galat daale, ye seedha redirect karega
+        window.location.href = "home.html"; 
+    });
+</script>
+</body>
+</html>
